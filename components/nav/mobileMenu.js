@@ -50,7 +50,7 @@ export default function MobileMenu({ isHidden }) {
             </Link>
           </li>
           <li>
-            <Link className="menu-listItem" href="#">
+            <Link className="menu-listItem" href="/storeAddress">
               فروشگاه ها
             </Link>
           </li>
@@ -90,3 +90,4 @@ export default function MobileMenu({ isHidden }) {
     </AnimatePresence>
   );
 }
+
