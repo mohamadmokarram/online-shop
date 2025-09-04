@@ -7,6 +7,8 @@ import OrderNumbers from "../orderNumbers";
 import Image from "next/image";
 import MobileMenu from "./mobileMenu";
 import { useState } from "react";
+import { MdOutlineAccountCircle } from "react-icons/md";
+import { FaShoppingCart } from "react-icons/fa";
 
 export default function Nav({ otherClasses = "" }) {
   const [isHidden, setIsHidden] = useState(true);
@@ -89,9 +91,11 @@ export default function Nav({ otherClasses = "" }) {
           </Link>
         </li>
         <div className="hidden md:flex gap-3  absolute left-10">
-          <Icon title="account_circle" fontsize="!text-3xl" />
+              <MdOutlineAccountCircle className="text-3xl" />
+          // <Icon title="account_circle" fontsize="!text-3xl" />
           <Link href="/payment" className="relative">
-            <Icon title="shopping_cart" fontsize="!text-3xl" />
+              <FaShoppingCart className="text-3xl" />
+            // <Icon title="shopping_cart" fontsize="!text-3xl" />
             <OrderNumbers />
           </Link>
         </div>
@@ -99,3 +103,4 @@ export default function Nav({ otherClasses = "" }) {
     </nav>
   );
 }
+
