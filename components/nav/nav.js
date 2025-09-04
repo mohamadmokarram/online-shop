@@ -92,10 +92,10 @@ export default function Nav({ otherClasses = "" }) {
         </li>
         <div className="hidden md:flex gap-3  absolute left-10">
               <MdOutlineAccountCircle className="text-3xl" />
-          // <Icon title="account_circle" fontsize="!text-3xl" />
+          
           <Link href="/payment" className="relative">
               <FaShoppingCart className="text-3xl" />
-            // <Icon title="shopping_cart" fontsize="!text-3xl" />
+          
             <OrderNumbers />
           </Link>
         </div>
@@ -103,4 +103,5 @@ export default function Nav({ otherClasses = "" }) {
     </nav>
   );
 }
+
 
