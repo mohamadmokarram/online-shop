@@ -33,17 +33,11 @@ export default function Nav({ otherClasses = "" }) {
           <Image src={smallLogo} width={100} height={100} alt="saedinia" />
         </Link>
         <div className="flex gap-3">
-          <Icon
-            title="account_circle"
-            fontsize="!text-3xl"
-            classes="text-textColor"
-          />
+          <MdOutlineAccountCircle className="text-3xl text-textColor" />
+
           <Link href="/payment" className="relative">
-            <Icon
-              title="shopping_cart"
-              fontsize="!text-3xl"
-              classes="text-textColor"
-            />
+            <FaShoppingCart className="text-3xl text-textColor cursor-pointer" />
+
             <OrderNumbers />
           </Link>
         </div>
@@ -91,11 +85,11 @@ export default function Nav({ otherClasses = "" }) {
           </Link>
         </li>
         <div className="hidden md:flex gap-3  absolute left-10">
-              <MdOutlineAccountCircle className="text-3xl" />
-          
+          <MdOutlineAccountCircle className="text-3xl" />
+
           <Link href="/payment" className="relative">
-              <FaShoppingCart className="text-3xl" />
-          
+            <FaShoppingCart className="text-3xl" />
+
             <OrderNumbers />
           </Link>
         </div>
@@ -103,5 +97,3 @@ export default function Nav({ otherClasses = "" }) {
     </nav>
   );
 }
-
-
