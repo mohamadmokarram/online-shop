@@ -50,7 +50,7 @@ export default async function DetailsPage({ params }) {
 
   return (
     <>
-      <div className="h-screen flex flex-col">
+      <div className="lg:h-screen flex flex-col">
         <Nav otherClasses="bg-backgroundDefault/100" />
         <section className="container grow flex flex-col md:flex-row border border-x-[#212529] border-t-0 border-b-0">
           {item && <ImageContainer item={item} />}
