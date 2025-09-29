@@ -1,7 +1,7 @@
 # online shop
 <p>a high-performance Next.js e-commerce platform featuring dynamic routing, Tailwind styling, and seamless UX, boosting conversions through optimized cart flows and responsive design.</p>
 
-<a href="https://online-shop-blond-theta.vercel.app/" target="_blank" >
+<a href="https://saedinia.netlify.app/" target="_blank" >
   <img src="https://img.shields.io/badge/demo-%20View%20Demo%20-blue.svg?style=for-the-badge&logo=github" alt="View Demo">
 </a>
 
