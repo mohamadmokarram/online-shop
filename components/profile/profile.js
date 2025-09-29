@@ -5,7 +5,7 @@ import { FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa";
 
 export default function Profile() {
   return (
-    <div className="profile-container z-20">
+    <div className="hidden md:block profile-container z-20">
       <figure id="profile">
         <Image
           src={profileImg}
