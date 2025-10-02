@@ -1,6 +1,5 @@
 "use client";
 import Link from "next/link";
-import Icon from "../icon";
 import logoImg from "@/public/logo.png";
 import smallLogo from "@/public/logo-small.png";
 import OrderNumbers from "../orderNumbers";
@@ -9,12 +8,16 @@ import MobileMenu from "./mobileMenu";
 import { useState } from "react";
 import { MdOutlineAccountCircle } from "react-icons/md";
 import { FaShoppingCart } from "react-icons/fa";
+import { RxHamburgerMenu } from "react-icons/rx";
+import { IoIosClose } from "react-icons/io";
 
 export default function Nav({ otherClasses = "" }) {
   const [isHidden, setIsHidden] = useState(true);
+  const [menuIsOpen, setMenuIsOpen] = useState(false);
 
   function handleShowMenu() {
     setIsHidden(prevState => !prevState);
+    setMenuIsOpen(prevState => !prevState);
   }
 
   return (
@@ -22,12 +25,17 @@ export default function Nav({ otherClasses = "" }) {
       className={`w-full px-4 bg-backgroundDefault/50 flex flex-col items-start md:block ${otherClasses}`}>
       {/* should hidden on md breakpoint */}
       <div className="w-full p-3 flex items-center justify-between md:hidden">
-        <Icon
-          onClick={handleShowMenu}
-          title="menu"
-          classes="text-textColor"
-          fontsize="text-4xl"
-        />
+        {menuIsOpen ? (
+          <IoIosClose
+            onClick={handleShowMenu}
+            className="text-textColor text-3xl cursor-pointer"
+          />
+        ) : (
+          <RxHamburgerMenu
+            onClick={handleShowMenu}
+            className="text-textColor text-3xl cursor-pointer"
+          />
+        )}
 
         <Link href="/">
           <Image src={smallLogo} width={100} height={100} alt="saedinia" />
